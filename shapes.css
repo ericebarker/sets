@@ -1,0 +1,169 @@
+body {
+    margin: initial;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.message-box {
+    color: #bfbfbf;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.score {
+    color: #bfbfbf;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.score .count {color: yellow;}
+
+.game-stats {
+    float: right;
+    right:20px;
+    width: 25%;
+    height: 10%;
+    margin: 25px 75px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 2px outset #b2b200;
+    background-color: #3a3a3a;
+    -webkit-box-shadow: 5px 6px 32px 0px rgba(255,255,0,0.64);
+    -moz-box-shadow: 5px 6px 32px 0px rgba(255,255,0,0.64);
+    box-shadow: 5px 6px 32px 0px rgba(255,255,0,0.64);
+}
+
+.row {
+    width: 55%;
+    display: flex;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+color: blue;
+}
+
+.green {
+color:#329932;
+}
+
+.spade:before {
+    content: "\2660";
+    font-size: 2em;
+}
+.heart:before {
+    content: "\2665";
+        font-size: 2em;
+}
+.diamond:before {
+    content: "\2666";
+        font-size: 2em;
+}
+
+.club:before {
+    content: "\2663";
+    font-size: 2em;
+}
+
+.board {
+    background-color: #5f5f5f;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.tile {
+    background-color: #ffffff;
+    width: 75px;
+    height: 40px;
+    display: block;
+    padding: 3 8;
+    margin: 3 8;
+    text-align:center;
+    border-radius: 5px;
+        background: -webkit-linear-gradient(#fff,#bfbfbf);
+    background: -o-linear-gradient(#fff,#bfbfbf);
+    background: -moz-linear-gradient(#fff,#bfbfbf);
+    background: linear-gradient(#fff,#bfbfbf);
+    -webkit-box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.75);
+    
+}
+.tile > span{
+    display: inline-block;
+    margin: 0 2;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 1px 1px black;
+}
+
+.selected { 
+    background-color: yellow!important; 
+    background: -webkit-linear-gradient(#ff0, #ff0);
+    background: -o-linear-gradient(#ff0, #ff0);
+    background: -moz-linear-gradient(#ff0, #ff0);
+    background: linear-gradient(#ff0, #ff0);
+    }
+
+span.opaque::after {
+    z-index: 101;
+    position: fixed;
+    content: '';
+    background-image: -webkit-linear-gradient(bottom left, #ffffff 25%, transparent 25%, transparent 50%, #ffffff 50%, #ffffff 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(bottom left, #ffffff 25%, transparent 25%, transparent 50%, #ffffff 50%, #ffffff 75%, transparent 75%, transparent);
+    background-image: linear-gradient(to top right, #ffffff 25%, transparent 25%, transparent 50%, #ffffff 50%, #ffffff 75%, transparent 75%, transparent);
+    background-size: 4px 4px;
+    height: 50%;
+    width: 100%;
+    right: 0em;
+    margin-top: 0.6em;
+    opacity: 0.7;
+        border-radius: 50px;
+}
+
+.empty.diamond:after {
+    content: "\2666";
+    font-size: 1.5em;
+    color: white !important;
+    position: fixed;
+    left: 2px;
+    top: 6px;
+}
+
+.empty.spade:after {
+    content: "\2660";
+    font-size: 1.5em;
+    color: white !important;
+    position: fixed;
+    left: 2px;
+    top: 6px;
+}
+
+.empty.heart:after {
+    content: "\2665";
+    font-size: 1.5em;
+    color: white !important;    position: fixed;
+    left: 2px;
+    top: 6px;
+}
+
+.empty.club:after {
+    content: "\2663";
+    font-size: 1.5em;
+    color: white !important;    position: fixed;
+    left: 2px;
+    top: 6px;
+}
+
